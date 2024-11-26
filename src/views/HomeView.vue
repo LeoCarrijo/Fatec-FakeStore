@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <a href="localhost:5173/products">Produtos</a>
   </main>
 </template>
