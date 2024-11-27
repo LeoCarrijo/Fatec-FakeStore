@@ -51,7 +51,7 @@
                     </div>
                     <div class="form-group">
                         <label>Preço:</label>
-                        <input type="number" v-model="productForm.price" required>
+                        <input type="number" step="0.01" v-model.number="productForm.price" required>
                     </div>
                     <div class="form-group">
                         <label>Categoria:</label>
