@@ -1,7 +1,7 @@
 <template>
     <h1>Products</h1>
     <ul>
-        <li v-for="prod in produto" :key="prod.id" @click="expandedItem(prod)">
+        <li class="prod__item" v-for="prod in produto" :key="prod.id" @click="expandedItem(prod)">
             <span>{{ prod.title }}</span>
             <div class="prod__detalhes" v-show="prod.expanded">
                 <span>{{ prod.category }}</span>
@@ -37,19 +37,16 @@ onMounted(() => {
 </script>
 
 <style scoped>
-li {
+.prod__item {
     cursor: pointer;
     margin-bottom: 10px;
 }
 
-li > div {
+.prod__detalhes {
     margin-top: 5px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.prod__detalhes {
     background-color: red;
 }
 </style>
