@@ -24,7 +24,7 @@
             <li class="prod__item" v-for="prod in filteredAndSortedProducts" :key="prod.id">
                 <div class="prod__header" @click="expandedItem(prod)">
                     <h2>{{ prod.title }}</h2>
-                    <span>{{ prod.price }}</span>
+                    <span>${{ prod.price }}</span>
                 </div>
                 
                 <div v-show="prod.expanded" class="prod__content">
@@ -180,6 +180,9 @@ function deleteProduct(id) {
 .prod__item {
     cursor: pointer;
     margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 .prod__detalhes {
